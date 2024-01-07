@@ -15,6 +15,42 @@
 */
 
 .page {
+  display: flex;
+  justify-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px), repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
+  background-size: cover;
 }
+
+.header {
+  font-family: PressStartRegular, sans-serif;
+  margin-block-start: 102px;
+  inline-size: 48.5%;
+  max-block-size: 364px;
+  background-color: #FFF;
+  color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block-start: 136px;
+  border: 2px solid #000;
+}
+
+.title__container {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.page__title {
+  font-size: 65px;
+}
+
+.button {
+  background: none;
+}
+
+
