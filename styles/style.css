@@ -16,7 +16,8 @@
 
 .page {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px), repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
@@ -26,15 +27,19 @@
 .header {
   font-family: PressStartRegular, sans-serif;
   margin-block-start: 102px;
-  inline-size: 48.5%;
-  max-block-size: 364px;
+  max-inline-size: 100%;
+  max-block-size: 366px;
   background-color: #FFF;
   color: #000;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  line-height: normal;
+  display: grid;
+  grid-template-rows: max-content min-content;
   padding-block-start: 136px;
   border: 2px solid #000;
+}
+
+.page__size {
+  inline-size: 698px;
 }
 
 .title__container {
@@ -45,12 +50,38 @@
   gap: 20px;
 }
 
+.title__container h2 {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
 .page__title {
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.button {
+.theme-menu {
+  margin-block-start: 25px;
+  padding-inline-start: 20px;
+  justify-self: center;
+}
+
+.theme-menu__list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.theme-menu__button {
   background: none;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 
+@media (width <= 375px) {
+  .header {
+    padding-block-start: 120px;
+    min-block-size: 323px;
+  }
+}
