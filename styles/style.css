@@ -20,7 +20,7 @@
   flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px), repeating-linear-gradient(to bottom, #e7e7e7, #1a1a1a 2px);
+  background-image: repeating-linear-gradient(to right, var(--page-background-first-gradient-from), transparent 2px), repeating-linear-gradient(to bottom, var(--page-background-second-gradient-from), var(--page-background-to) 2px);
   background-size: cover;
 }
 
@@ -28,14 +28,15 @@
   font-family: PressStartRegular, sans-serif;
   margin-block-start: 102px;
   max-inline-size: 100%;
+  block-size: 366px;
   max-block-size: 366px;
-  background-color: #FFF;
-  color: #000;
+  background-color: var(--blocks-background-color);
+  color: var(--font-color);
   line-height: normal;
   display: grid;
   grid-template-rows: max-content min-content;
   padding-block-start: 136px;
-  border: 2px solid #000;
+  border: 2px solid var(--border-color-block);
 }
 
 .page__size {
@@ -70,18 +71,78 @@
   gap: 14px;
 }
 
+.theme-menu__list:last-child {
+  gap: 8px;
+}
+
+
 .theme-menu__button {
   background: none;
   outline: none;
   border: none;
   font-size: 14px;
   text-transform: uppercase;
+  transition: opacity 0.5s;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.5s;
+}
+
+.theme-menu__button[disabled] {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button[disabled]::before {
+  content: '▶';
+  position: absolute;
+  left: -14.5px;
+  animation: selectedTheme 0.5s infinite ease-in-out alternate;
+  
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  block-size: 2px;
+  width: 0%;
+  margin-top: 1px;
+  color: inherit;
+  background-color: var(--font-color);
+  transition: width 0.5s, opacity 0.5s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+  opacity: 0.6;
+  transition: width 0.5s, opacity 0.5s;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.5s;
+}
+
+.main {
+  margin-block-start: 104px;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px;
 }
 
 
 @media (width <= 375px) {
   .header {
     padding-block-start: 120px;
+    block-size: 323px;
     min-block-size: 323px;
   }
 }
