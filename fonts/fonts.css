@@ -5,3 +5,12 @@
     font-weight: 400;
     font-display: swap;
 }
+
+@font-face {
+    font-family: InterVariable;
+    src: 
+        url('./Inter-Variable.woff2') format('woff2 supports variations'),
+        url('./Inter-Variable.woff2') format('woff2-variations');
+    font-display: swap;
+    font-weight: 400, 785;
+}

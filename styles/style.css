@@ -27,7 +27,7 @@
 .header {
   font-family: PressStartRegular, sans-serif;
   margin-block-start: 102px;
-  max-inline-size: 100%;
+  inline-size: 100%;
   block-size: 366px;
   max-block-size: 366px;
   background-color: var(--blocks-background-color);
@@ -40,7 +40,7 @@
 }
 
 .page__size {
-  inline-size: 698px;
+  max-inline-size: 698px;
 }
 
 .title__container {
@@ -136,6 +136,16 @@
   flex-direction: column;
   align-items: center;
   gap: 54px;
+}
+
+.card {
+  inline-size: 100%;
+  border: 2px solid var(--border-color-block);
+  font-family: InterVariable, sans-serif;
+}
+
+.card__image {
+  inline-size: 100%;
 }
 
 
