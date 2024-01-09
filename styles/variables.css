@@ -8,6 +8,9 @@
     --blocks-background-color: #FFF;
     --font-color: #000;
     --border-color-block: #000;
+    --background-title-color: #FFF;
+    --font-weight-title: 700;
+
 }
 
 :root.theme-dark {
@@ -17,6 +20,8 @@
     --blocks-background-color: #000;
     --font-color: #00CC14;
     --border-color-block: #00CC14;
+    --background-title-color: #000;
+    --font-weight-title: 785;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +32,8 @@
         --blocks-background-color: #000;
         --font-color: #00CC14;
         --border-color-block: #00CC14;
+        --background-title-color: #000;
+        --font-weight-title: 785;
     }
 }
 
@@ -38,5 +45,7 @@
         --blocks-background-color: #FFF;
         --font-color: #000;
         --border-color-block: #000;
+        --background-title-color: #FFF;
+        --font-weight-title: 700;
     }
 }
