@@ -20,16 +20,12 @@
   flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(
-      to right,
+  background-image: repeating-linear-gradient(to right,
       var(--page-background-first-gradient-from),
-      transparent 2px
-    ),
-    repeating-linear-gradient(
-      to bottom,
+      transparent 2px),
+    repeating-linear-gradient(to bottom,
       var(--page-background-second-gradient-from),
-      var(--page-background-to) 2px
-    );
+      var(--page-background-to) 2px);
   background-size: cover;
 }
 
@@ -151,6 +147,7 @@
   border: 2px solid var(--border-color-block);
   font-family: InterVariable, sans-serif;
   color: var(--font-color);
+  background-color: var(--blocks-background-color);
 }
 
 .card__title {
@@ -164,14 +161,20 @@
 .card__image {
   inline-size: 100%;
   border-bottom: 2px solid var(--border-color-block);
-  border-top: 2px solid var(--border-color-block);
+  border-top: 3px solid var(--border-color-block);
 }
 
 .card__text {
-  background-color: var(--blocks-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding-block-start: 25px;
+  padding-inline: 25px;
+  font-size: 18px;
+  font-weight: var(--font-weight-main-text);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .header {
     padding-block-start: 120px;
     block-size: 323px;

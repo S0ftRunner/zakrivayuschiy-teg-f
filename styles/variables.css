@@ -4,36 +4,38 @@
 :root.theme-light {
     --page-background-first-gradient-from: #d3d3d3;
     --page-background-second-gradient-from: #e7e7e7;
-    --page-background-to: #1a1a1a; 
+    --page-background-to: #1a1a1a;
     --blocks-background-color: #FFF;
     --font-color: #000;
     --border-color-block: #000;
     --background-title-color: #FFF;
     --font-weight-title: 700;
-
+    --font-weight-main-text: 400;
 }
 
 :root.theme-dark {
     --page-background-first-gradient-from: #000;
     --page-background-second-gradient-from: #007f0c;
-    --page-background-to: #004306; 
+    --page-background-to: #004306;
     --blocks-background-color: #000;
     --font-color: #00CC14;
     --border-color-block: #00CC14;
     --background-title-color: #000;
     --font-weight-title: 785;
+    --font-weight-main-text: 465;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --page-background-first-gradient-from: #000;
         --page-background-second-gradient-from: #007f0c;
-        --page-background-to: #004306; 
+        --page-background-to: #004306;
         --blocks-background-color: #000;
         --font-color: #00CC14;
         --border-color-block: #00CC14;
         --background-title-color: #000;
         --font-weight-title: 785;
+        --font-weight-main-text: 465;
     }
 }
 
@@ -41,11 +43,12 @@
     :root {
         --page-background-first-gradient-from: #d3d3d3;
         --page-background-second-gradient-from: #e7e7e7;
-        --page-background-to: #1a1a1a; 
+        --page-background-to: #1a1a1a;
         --blocks-background-color: #FFF;
         --font-color: #000;
         --border-color-block: #000;
         --background-title-color: #FFF;
         --font-weight-title: 700;
+        --font-weight-main-text: 400;
     }
 }
