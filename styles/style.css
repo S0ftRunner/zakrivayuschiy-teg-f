@@ -158,10 +158,20 @@
   font-size: 18px;
 }
 
+.card__image-container {
+  position: relative;
+}
+
 .card__image {
   inline-size: 100%;
   border-bottom: 2px solid var(--border-color-block);
   border-top: 3px solid var(--border-color-block);
+}
+
+.card__tag {
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
 
 .card__text {
