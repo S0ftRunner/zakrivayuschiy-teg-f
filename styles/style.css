@@ -177,8 +177,9 @@
   font-weight: 400;
   color: var(--font-color);
   font-size: 14px;
-  mix-blend-mode: multiply;
+  mix-blend-mode: hard-light;
   font-family: InterVariable, sans-serif;
+  text-transform: uppercase;
 }
 
 .card__text {
@@ -190,7 +191,8 @@
   font-size: 18px;
   font-weight: var(--font-weight-main-text);
   margin-block-end: 25px;
-  line-height: 21px; /* 116.667% */
+  line-height: 21px;
+  /* 116.667% */
 }
 
 .button__container {
@@ -210,6 +212,17 @@
   inline-size: 130px;
   font-weight: 400;
   line-height: 90%;
+  transition: box-shadow 0.5s;
+}
+
+.like__button:hover {
+  cursor: pointer;
+}
+
+.like__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px #000;
+  transition: box-shadow 0.5s;
 }
 
 @media (width <=375px) {
