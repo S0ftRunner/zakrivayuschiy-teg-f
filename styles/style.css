@@ -143,6 +143,8 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   inline-size: 100%;
   border: 2px solid var(--border-color-block);
   font-family: InterVariable, sans-serif;
@@ -172,6 +174,11 @@
   position: absolute;
   top: 25px;
   right: 25px;
+  font-weight: 400;
+  color: var(--font-color);
+  font-size: 14px;
+  mix-blend-mode: multiply;
+  font-family: InterVariable, sans-serif;
 }
 
 .card__text {
@@ -182,6 +189,27 @@
   padding-inline: 25px;
   font-size: 18px;
   font-weight: var(--font-weight-main-text);
+  margin-block-end: 25px;
+  line-height: 21px; /* 116.667% */
+}
+
+.button__container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 19px;
+  margin-block-end: 25px;
+  margin-inline-end: 25px;
+}
+
+.like__button {
+  background: none;
+  border: 2px solid var(--border-color-block);
+  font-family: PressStartRegular, sans-serif;
+  padding: 9px 17px;
+  inline-size: 130px;
+  font-weight: 400;
+  line-height: 90%;
 }
 
 @media (width <=375px) {
