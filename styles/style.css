@@ -20,12 +20,16 @@
   flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(to right,
+  background-image: repeating-linear-gradient(
+      to right,
       var(--page-background-first-gradient-from),
-      transparent 2px),
-    repeating-linear-gradient(to bottom,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
       var(--page-background-second-gradient-from),
-      var(--page-background-to) 2px);
+      var(--page-background-to) 4px
+    );
   background-size: cover;
 }
 
@@ -214,7 +218,6 @@
   transition: border 0.5s;
 }
 
-
 .card__icon-button:hover {
   cursor: pointer;
 }
@@ -223,6 +226,40 @@
   outline: none;
   border: 2px solid var(--border-color-block);
   transition: border 0.5s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--fill-contour);
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--fill-contour);
+  transition: fill 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  fill: #FF0000;
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: #FF0000;
+  transition: fill 0.3s;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
@@ -242,10 +279,10 @@
 }
 
 .card__like-button::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
-  top:0;
+  top: 0;
   left: 0;
   height: 100%;
   transition: all 0.5s ease-in-out;
@@ -260,7 +297,6 @@
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--border-color-block);
 }
-
 
 .button__text {
   position: absolute;
