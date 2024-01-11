@@ -372,7 +372,7 @@
   position: fixed;
   inset: 0;
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 1s;
   inline-size: 357px;
   block-size: 193px;
   border: 2px solid var(--border-color-block);
@@ -390,6 +390,7 @@
 .dialog:not([open]) {
   opacity: 0;
   pointer-events: none;
+  transition: all 1ms;
 }
 
 .dialog-text__container {
