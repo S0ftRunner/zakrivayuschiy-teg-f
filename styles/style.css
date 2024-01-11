@@ -286,7 +286,7 @@
   left: 0;
   height: 100%;
   transition: all 0.5s ease-in-out;
-  background-color: #000;
+  background-color: var(--fill-contour);
 }
 
 .card__like-button:hover::before {
