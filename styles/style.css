@@ -143,7 +143,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 54px;
+  gap: 50px;
 }
 
 .card {
@@ -182,7 +182,8 @@
   color: var(--font-color);
   font-size: 14px;
   mix-blend-mode: hard-light;
-  font-family: InterVariable, sans-serif;
+  opacity: 0.5;
+  font-family: PressStartRegular, sans-serif;
   text-transform: uppercase;
 }
 

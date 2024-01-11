@@ -13,6 +13,7 @@
   --font-color-button-liked: #fff;
   --fill-color-button-liked: #000;
   --fill-contour: #000;
+  --fill-favicon-color: #000;
 }
 
 :root.theme-dark {
@@ -28,6 +29,7 @@
   --font-color-button-liked: #00CC14;
   --fill-color-button-liked: #00cc14;
   --fill-contour: #00cc14;
+  --fill-favicon-color: #00cc14;
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,6 +46,7 @@
     --font-color-button-liked: #fff;
     --fill-color-button-liked: #000;
     --fill-contour: #000;
+    --fill-favicon-color: #000;
   }
 }
 
@@ -61,5 +64,6 @@
     --font-color-button-liked: #00CC14;
     --fill-color-button-liked: #00cc14;
     --fill-contour: #00cc14;
+    --fill-favicon-color: #00cc14;
   }
 }
