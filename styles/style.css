@@ -259,8 +259,30 @@
   transition: fill 0.3s;
 }
 
+.like-icon.is-liked .main-body {
+  fill: #FF0000;
+}
+
+.like-icon.is-liked .core {
+  fill: #FF0000;
+}
+
+.like-icon.is-liked .contour {
+  fill: #FF0000;
+  transition: fill;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked {
+  animation: scaleHeart 0.3s 0.1s ease-in alternate;
+}
+
 .sparks {
   opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparksShow 0.3s 0.3s ease-in alternate;
 }
 
 .card__like-button {
