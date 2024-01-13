@@ -22,10 +22,10 @@
   min-block-size: 100dvb;
   background-image: repeating-linear-gradient(to right,
       var(--page-background-first-gradient-from),
-      transparent 4px),
+      transparent 2px),
     repeating-linear-gradient(to bottom,
       var(--page-background-second-gradient-from),
-      var(--page-background-to) 4px);
+      var(--page-background-to) 2px);
   background-size: cover;
 }
 
