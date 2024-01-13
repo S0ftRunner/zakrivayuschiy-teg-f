@@ -172,6 +172,7 @@
   max-block-size: 696px;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1/1;
 }
 
 .card__tag {
@@ -185,6 +186,8 @@
   opacity: 0.5;
   font-family: PressStartRegular, sans-serif;
   text-transform: uppercase;
+  stroke: 1px var(--stroke-color-tag);
+  -webkit-text-stroke: 1px var(--stroke-color-tag);
 }
 
 .tag__lowercase {
@@ -437,6 +440,30 @@
 
 .gray-scale__filter {
   filter: grayscale(80%);
+}
+
+.hue-rotate__filter {
+  filter: hue-rotate(50deg);
+}
+
+.invert__filter {
+  filter: invert(25%);
+}
+
+.opacity__filter {
+  filter: opacity(50%);
+}
+
+.brightness__filter {
+  filter: brightness(160%);
+}
+
+.sepia__filter {
+  filter: sepia(50%);
+}
+
+.multiply__filter {
+  filter: brightness(130%) blur(2px);
 }
 
 

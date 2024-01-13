@@ -1,39 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root.theme-light {
-  --page-background-first-gradient-from: #d3d3d3;
-  --page-background-second-gradient-from: #e7e7e7;
-  --page-background-to: #1a1a1a;
-  --blocks-background-color: #fff;
-  --font-color: #000;
-  --border-color-block: #000;
-  --background-title-color: #fff;
-  --font-weight-title: 700;
-  --font-weight-main-text: 400;
-  --font-color-button-liked: #fff;
-  --fill-color-button-liked: #000;
-  --fill-contour: #000;
-  --fill-favicon-color: #000;
-}
-
-:root.theme-dark {
-  --page-background-first-gradient-from: #000;
-  --page-background-second-gradient-from: #007f0c;
-  --page-background-to: #004306;
-  --blocks-background-color: #000;
-  --font-color: #00cc14;
-  --border-color-block: #00cc14;
-  --background-title-color: #000;
-  --font-weight-title: 785;
-  --font-weight-main-text: 465;
-  --font-color-button-liked: #00CC14;
-  --fill-color-button-liked: #00cc14;
-  --fill-contour: #00cc14;
-  --fill-favicon-color: #00cc14;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
     --page-background-first-gradient-from: #d3d3d3;
     --page-background-second-gradient-from: #e7e7e7;
     --page-background-to: #1a1a1a;
@@ -47,11 +14,11 @@
     --fill-color-button-liked: #000;
     --fill-contour: #000;
     --fill-favicon-color: #000;
-  }
+    --stroke-color-tag: #FFF;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+:root.theme-dark {
     --page-background-first-gradient-from: #000;
     --page-background-second-gradient-from: #007f0c;
     --page-background-to: #004306;
@@ -65,5 +32,43 @@
     --fill-color-button-liked: #00cc14;
     --fill-contour: #00cc14;
     --fill-favicon-color: #00cc14;
-  }
+    --stroke-color-tag: #000;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --page-background-first-gradient-from: #d3d3d3;
+        --page-background-second-gradient-from: #e7e7e7;
+        --page-background-to: #1a1a1a;
+        --blocks-background-color: #fff;
+        --font-color: #000;
+        --border-color-block: #000;
+        --background-title-color: #fff;
+        --font-weight-title: 700;
+        --font-weight-main-text: 400;
+        --font-color-button-liked: #fff;
+        --fill-color-button-liked: #000;
+        --fill-contour: #000;
+        --fill-favicon-color: #000;
+        --stroke-color-tag: #FFF;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-background-first-gradient-from: #000;
+        --page-background-second-gradient-from: #007f0c;
+        --page-background-to: #004306;
+        --blocks-background-color: #000;
+        --font-color: #00cc14;
+        --border-color-block: #00cc14;
+        --background-title-color: #000;
+        --font-weight-title: 785;
+        --font-weight-main-text: 465;
+        --font-color-button-liked: #00CC14;
+        --fill-color-button-liked: #00cc14;
+        --fill-contour: #00cc14;
+        --fill-favicon-color: #00cc14;
+        --stroke-color-tag: #000;
+    }
 }
