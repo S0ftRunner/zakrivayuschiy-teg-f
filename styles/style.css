@@ -285,6 +285,10 @@
   font-family: PressStartRegular, sans-serif;
 }
 
+.card__like-button {
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+}
+
 .footer {
   display: flex;
   justify-content: center;
