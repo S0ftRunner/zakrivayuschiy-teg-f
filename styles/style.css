@@ -20,16 +20,12 @@
   flex-direction: column;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(
-      to right,
+  background-image: repeating-linear-gradient(to right,
       var(--page-background-first-gradient-from),
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
+      transparent 4px),
+    repeating-linear-gradient(to bottom,
       var(--page-background-second-gradient-from),
-      var(--page-background-to) 4px
-    );
+      var(--page-background-to) 4px);
   background-size: cover;
 }
 
@@ -166,12 +162,16 @@
 
 .card__image-container {
   position: relative;
+  border-bottom: 2px solid var(--border-color-block);
+  border-top: 3px solid var(--border-color-block);
 }
 
 .card__image {
+  display: block;
   inline-size: 100%;
-  border-bottom: 2px solid var(--border-color-block);
-  border-top: 3px solid var(--border-color-block);
+  max-block-size: 696px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__tag {
@@ -185,6 +185,10 @@
   opacity: 0.5;
   font-family: PressStartRegular, sans-serif;
   text-transform: uppercase;
+}
+
+.tag__lowercase {
+  text-transform: lowercase;
 }
 
 .card__text {
@@ -381,10 +385,10 @@
 }
 
 .dialog[open] {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .dialog:not([open]) {
@@ -397,11 +401,18 @@
   display: flex;
   block-size: 63px;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  inline-size: calc((293 / 357) * 100%);
 }
 
 .floppy__dialog {
-  inline-size: 40px;
-  block-size: 40px;
+  inline-size: 79px;
+  block-size: 79px;
+}
+
+.floppy__dialog rect {
+  fill: var(--font-color);
 }
 
 .dialog-text {
@@ -413,9 +424,20 @@
 }
 
 .dialog-close__button {
-
+  inline-size: calc((293 / 357) * 100%);
 }
 
+.dialog-close__button {
+  text-transform: uppercase;
+}
+
+.blur__filter {
+  filter: blur(2px);
+}
+
+.gray-scale__filter {
+  filter: grayscale(80%);
+}
 
 
 @media (width <=375px) {
@@ -427,5 +449,22 @@
 
   .card__list {
     gap: 50px;
+  }
+
+  .save-it__button {
+    block-size: 80px;
+    inline-size: 306px;
+  }
+
+  .save-it__button-container .button__text {
+    top: 65%;
+    right: 5%;
+  }
+
+  .save-it__button-container .floppy {
+    top: 10px;
+    left: 45%;
+    block-size: 28px;
+    inline-size: 28px;
   }
 }
